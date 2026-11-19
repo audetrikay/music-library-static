@@ -1588,7 +1588,7 @@ document.addEventListener("keydown", (e) => {
 async function loadAlbums(isBackgroundRefresh = false) {
   let data;
   try {
-    const res = await fetch("/api/albums");
+    const res = await fetch("./albums.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
   } catch (err) {
